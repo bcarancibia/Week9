@@ -1,35 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Week 9 Homework by bcarancibia</title>
+    <meta name="description" content="Week 9 Homework : ">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Week 9 Homework</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Week 9 Homework</h1>
-        <p></p>
 
-        <p class="view"><a href="https://github.com/bcarancibia/Week9">View the Project on GitHub <small>bcarancibia/Week9</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bcarancibia/Week9">View on GitHub</a>
 
+          <h1 id="project_title">Week 9 Homework</h1>
+          <h2 id="project_tagline"></h2>
 
-        <ul>
-          <li><a href="https://github.com/bcarancibia/Week9/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/bcarancibia/Week9/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/bcarancibia/Week9">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bcarancibia/Week9/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bcarancibia/Week9/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h3>
-<a name="-value-added---week-9-cuny-bridge-courses" class="anchor" href="#-value-added---week-9-cuny-bridge-courses"><span class="octicon octicon-link"></span></a># Value Added - Week 9 CUNY Bridge Courses</h3>
+<a name="value-added---week-9-cuny-bridge-courses" class="anchor" href="#value-added---week-9-cuny-bridge-courses"><span class="octicon octicon-link"></span></a>Value Added - Week 9 CUNY Bridge Courses</h3>
 
 <p>The assignment for the Week 9 of the CUNY Bridge course was to take a dataset provided to the class and work as a team to perform an exploratory data analysis that compares the four datasets.</p>
 
@@ -39,16 +42,41 @@
 
 <p>The analysis of this data was performed using R and Python with specific packages that focused on graphing. These packages are were ggplot2 for R and matplotlib for Python.</p>
 
-<p>The first set of analysis done on the data were summary statistics, it was discovered that the datasets all had very similar mean, variances, maximums, minimums, and similar linear regression. Some of the key points that the group found while performing this exercise is that diagnostic checks should be run to verify the model. Finding the biggest influencers on the model can be useful for diagnosing problems with a model. </p>
+<p>The first set of analysis done on the data were summary statistics, it was discovered that the datasets all had very similar mean, variances, maximums, minimums, and similar linear regression. Some of the key points that the group found while performing this exercise is that diagnostic checks should be run to verify the model. Finding the biggest influences on the model can be useful for diagnosing problems with a model. </p>
 
 <p>Checking for influencing data points found that in each dataset there were one or two outliers. The analysis from the group found that a simple linear regression model is the way to start, but that model should be tested and alternative models should be considered. Analysis must verify that the model is a good fit and that the assumptions behind the linear model are satisfied.</p>
+
+<h2>
+<a name="some-comments-on-r-and-python" class="anchor" href="#some-comments-on-r-and-python"><span class="octicon octicon-link"></span></a>Some comments on R and Python</h2>
+
+<p>Both R and Python provide functionality for reading a .csv and R provides a native way to load data from a .csv file. Python does not provide methods for loading data into a data frame. Users can integrate pandas, numpy, or scipy to load the .csv file into a dataframe within Python. R can create plots natively and again Python needs to have a package downloaded and imported before you start using Python. The plots are quite similar. </p>
+
+<p>The group came to the conclusion that as a language specifically for statistical analysis, R outperforms Python in the areas of data manipulation and exploratory data analysis. </p>
+
+<p>I disagree with this group opinion. R is good language for purely statistical programming, but that is the limit of R. R is purely a language for statistical analysis. Python allows for a wide variety of options besides just data manipulation and statistical analysis. Python with it's vast libraries allows a user to do more activities and much quicker than just purely R. </p>
+
+<h2>
+<a name="anscombes-quartet---real-world-example" class="anchor" href="#anscombes-quartet---real-world-example"><span class="octicon octicon-link"></span></a>Anscombe's Quartet - Real World Example</h2>
+
+<p>There are several real world examples of datasets that have some of the key issues raised in Anscombe's Quartet. One of these examples of the distribution of starting salaries for new law graduates. </p>
+
+<p>In 2012 the National Association of Law Placement (NALP) reported that lawyers made on average $80,798 on average in starting salary, but when you look at the salary distribution you see that the law salaries fall into two camps.</p>
+
+<p>Graphic found <a href="https://s3.amazonaws.com/heapdatablog/anscombe_lawyers.gif">here</a></p>
+
+<p>The majority of new lawyers make somewhere between $35,000 and $75,000 per year and a sizable minority earns $160,000 per year. The average the NALP saw falls in the trough between the two peaks, and few lawyers actually have salaries near that number. Also, something else that was discovered when statisticians graphed the data is there is a giant speak at exactly $160,000 rather than a peak with some variance. It turns out the salaries the NALP display are not actual legal salaries, but the NALP display data that law schools report to the NALP. Visualizing the data allowed users to get a better picture of what realistic salaries are and expose a potential flaw in the NALP data. </p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/bcarancibia">bcarancibia</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Week 9 Homework maintained by <a href="https://github.com/bcarancibia">bcarancibia</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
